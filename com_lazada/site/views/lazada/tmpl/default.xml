@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_LAZADA_VIEW_DEFAUL_TITLE">
+		<message>COM_LAZADA_VIEW_DEFAULT_DESC</message>
+	</layout>
+<fields 
+	name="request"
+	addfieldpath="/administrator/components/com_lazada/models/fields"
+	>
+	<fieldset name="request">
+		<field 
+			name="id"
+			type="lazada"
+			lable="COM_LAZADA_FIELD_PRODUCT_LABLE"
+			description="COM_LAZADA_FIELD_PRODUCT_DESC"
+			default="1"
+			>
+				<option value="1">San pham 1</option>
+				<option value="2">San pham 2</option>
+			
+		</field>
+	</fieldset>
+</fields>
+</metadata>

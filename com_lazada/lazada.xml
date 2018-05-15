@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<name>COM_LAZADA</name>
+	<creationDate>January 2018</creationDate>
+	<author>redSHOP</author>
+	<authorEmail>john.doe@example.org</authorEmail>
+	<authorUrl>http://www.example.org</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>0.1.1</version>
+	<description>COM_LAZADA_DESCRIPTION</description>
+	
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>lazada.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+	</files>
+
+    <languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_lazada.ini</language>
+    </languages>
+
+	<media destination="com_lazada" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+		<folder>lazada</folder>
+	</media>
+
+	<administration>
+
+		<menu link='index.php?option=com_lazada' img="../media/com_lazada/images/Tux-16x16.png">COM_LAZADA_MENU</menu>
+
+		<files folder="admin">
+
+			<filename>index.html</filename>
+			<filename>lazada.php</filename>
+			<filename>controller.php</filename>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>sql</folder>
+			<folder>views</folder>
+			<folder>views/file</folder>
+			<folder>controllers</folder>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_lazada.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_lazada.sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>
